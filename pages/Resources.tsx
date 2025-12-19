@@ -74,7 +74,9 @@ export default function Resources() {
                 display: "flex",
                 flexDirection: "column",
               }}
-              bodyStyle={{ flex: 1, display: "flex", flexDirection: "column" }}
+              styles={{
+                body: { flex: 1, display: "flex", flexDirection: "column" },
+              }}
               actions={[
                 <Button
                   type="text"

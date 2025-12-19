@@ -108,14 +108,14 @@ export default function Home() {
             <Statistic
               title="Dân số ảnh hưởng"
               value={"1-3%"}
-              valueStyle={{ color: "#2a9d8f", fontWeight: "bold" }}
+              styles={{ content: { color: "#2a9d8f", fontWeight: "bold" } }}
             />
           </Col>
           <Col span={12}>
             <Statistic
               title="Tuổi khởi phát trung bình"
               value={25}
-              valueStyle={{ color: "#2a9d8f", fontWeight: "bold" }}
+              styles={{ content: { color: "#2a9d8f", fontWeight: "bold" } }}
             />
           </Col>
         </Row>

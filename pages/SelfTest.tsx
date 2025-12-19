@@ -71,11 +71,12 @@ export default function SelfTest() {
             <Col span={24} key={index}>
               <label style={{ cursor: "pointer", display: "block" }}>
                 <Card
-                  hoverable
-                  bodyStyle={{
-                    padding: 16,
-                    display: "flex",
-                    alignItems: "center",
+                  styles={{
+                    body: {
+                      padding: 16,
+                      display: "flex",
+                      alignItems: "center",
+                    },
                   }}
                   style={{ borderRadius: 12, border: "1px solid #f0f0f0" }}
                 >
