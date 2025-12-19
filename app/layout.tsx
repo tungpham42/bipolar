@@ -3,6 +3,7 @@ import { ConfigProvider } from "antd";
 import StyledComponentsRegistry from "@/lib/AntdRegistry";
 import themeConfig from "@/theme/themeConfig";
 import MainLayout from "@/components/MainLayout"; // We import the shell component
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import "./globals.css";
 import { Metadata } from "next";
 
@@ -59,6 +60,7 @@ export default function RootLayout({
             <MainLayout>{children}</MainLayout>
           </ConfigProvider>
         </StyledComponentsRegistry>
+        <GoogleAnalytics ga_id="G-HHXZSNQ65X" />
       </body>
     </html>
   );
