@@ -79,27 +79,27 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
           boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
         }}
       >
-        <div
-          style={{
-            color: "#2a9d8f",
-            fontWeight: 800,
-            fontSize: "1.5rem",
-            marginRight: "2rem",
-            cursor: "pointer",
-            whiteSpace: "nowrap",
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-          }}
-          onClick={() => router.push("/")}
-        >
-          <HeartOutlined /> Lưỡng Cực
-        </div>
+        <Link href={"/"}>
+          <div
+            style={{
+              color: "#2a9d8f",
+              fontWeight: 800,
+              fontSize: "1.5rem",
+              marginRight: "2rem",
+              cursor: "pointer",
+              whiteSpace: "nowrap",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+            }}
+          >
+            <HeartOutlined /> Lưỡng Cực
+          </div>
+        </Link>
         <Menu
           mode="horizontal"
           selectedKeys={[pathname || ""]} // Use pathname for highlighting
           items={menuItems}
-          // onClick={(e) => router.push(e.key)} // Removed this line
           style={{
             flex: 1,
             minWidth: 0,
