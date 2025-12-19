@@ -2,13 +2,11 @@
 
 import { Typography, Card, Row, Col, Statistic, Divider, Button } from "antd";
 import { ArrowRightOutlined, HeartFilled } from "@ant-design/icons";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const { Title, Paragraph } = Typography;
 
 export default function Home() {
-  const router = useRouter();
-
   return (
     <div>
       {/* Hero Section */}
@@ -31,15 +29,16 @@ export default function Home() {
           Bạn không đơn độc. Chúng tôi ở đây để cung cấp thông tin y khoa chính
           xác, lời khuyên hữu ích và sự hỗ trợ ấm áp cho hành trình của bạn.
         </Paragraph>
-        <Button
-          type="primary"
-          size="large"
-          shape="round"
-          icon={<ArrowRightOutlined />}
-          onClick={() => router.push("/bieu-hien")}
-        >
-          Tìm hiểu ngay
-        </Button>
+        <Link href="/bieu-hien">
+          <Button
+            type="primary"
+            size="large"
+            shape="round"
+            icon={<ArrowRightOutlined />}
+          >
+            Tìm hiểu ngay
+          </Button>
+        </Link>
       </div>
 
       <Title level={3} style={{ textAlign: "center", marginBottom: 32 }}>

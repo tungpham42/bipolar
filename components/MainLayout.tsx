@@ -3,6 +3,7 @@
 import React from "react";
 import { Layout, Menu, theme, FloatButton } from "antd";
 import { useRouter, usePathname } from "next/navigation"; // Next.js Hooks
+import Link from "next/link"; // Import Link
 import {
   HomeOutlined,
   HeartOutlined,
@@ -23,18 +24,43 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
     token: { borderRadiusLG },
   } = theme.useToken();
 
+  // Updated menuItems to use Link in the label
   const menuItems = [
-    { key: "/", icon: <HomeOutlined />, label: "Tổng quan" },
-    { key: "/bieu-hien", icon: <InfoCircleOutlined />, label: "Biểu hiện" },
-    { key: "/phan-loai", icon: <HeartOutlined />, label: "Phân loại" },
-    { key: "/cach-chua-tri", icon: <MedicineBoxOutlined />, label: "Điều trị" },
-    { key: "/song-chung", icon: <SmileOutlined />, label: "Sống chung" },
+    {
+      key: "/",
+      icon: <HomeOutlined />,
+      label: <Link href="/">Tổng quan</Link>,
+    },
+    {
+      key: "/bieu-hien",
+      icon: <InfoCircleOutlined />,
+      label: <Link href="/bieu-hien">Biểu hiện</Link>,
+    },
+    {
+      key: "/phan-loai",
+      icon: <HeartOutlined />,
+      label: <Link href="/phan-loai">Phân loại</Link>,
+    },
+    {
+      key: "/cach-chua-tri",
+      icon: <MedicineBoxOutlined />,
+      label: <Link href="/cach-chua-tri">Điều trị</Link>,
+    },
+    {
+      key: "/song-chung",
+      icon: <SmileOutlined />,
+      label: <Link href="/song-chung">Sống chung</Link>,
+    },
     {
       key: "/trac-nghiem",
       icon: <SafetyCertificateOutlined />,
-      label: "Trắc nghiệm",
+      label: <Link href="/trac-nghiem">Trắc nghiệm</Link>,
     },
-    { key: "/dia-chi", icon: <EnvironmentOutlined />, label: "Địa chỉ" },
+    {
+      key: "/dia-chi",
+      icon: <EnvironmentOutlined />,
+      label: <Link href="/dia-chi">Địa chỉ</Link>,
+    },
   ];
 
   return (
@@ -73,7 +99,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
           mode="horizontal"
           selectedKeys={[pathname || ""]} // Use pathname for highlighting
           items={menuItems}
-          onClick={(e) => router.push(e.key)} // Use router.push
+          // onClick={(e) => router.push(e.key)} // Removed this line
           style={{
             flex: 1,
             minWidth: 0,
