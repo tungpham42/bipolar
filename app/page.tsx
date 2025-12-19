@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Trang chủ | Rối Loạn Cảm Xúc Lưỡng Cực",
+  description:
+    "Nền tảng cung cấp thông tin về chứng Rối Loạn Cảm Xúc Lưỡng Cực.",
   openGraph: {
     title: "Trang chủ | Rối Loạn Cảm Xúc Lưỡng Cực",
     description:

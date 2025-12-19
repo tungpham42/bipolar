@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Sống Chung",
+  description:
+    "Hướng dẫn cách Sống Chung với người bị chứng Rối Loạn Cảm Xúc Lưỡng Cực.",
   openGraph: {
     title: "Sống Chung",
     description:

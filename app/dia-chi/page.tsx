@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Địa Chỉ Hỗ Trợ",
+  description: "Địa Chỉ Hỗ Trợ uy tín của chứng Rối Loạn Cảm Xúc Lưỡng Cực.",
   openGraph: {
     title: "Địa Chỉ Hỗ Trợ",
     description: "Địa Chỉ Hỗ Trợ uy tín của chứng Rối Loạn Cảm Xúc Lưỡng Cực.",
