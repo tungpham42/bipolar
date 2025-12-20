@@ -72,3 +72,7 @@ span.ant-btn-icon:not(.ant-float-btn-icon) {
   justify-content: center !important;
   align-items: center !important;
 }
+
+.ant-steps-item-icon.ant-wave-target:not(.ant-timeline-item-icon) {
+  width: 40px !important;
+}
